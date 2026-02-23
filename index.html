@@ -3,76 +3,214 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Surya T. Bijjala</title>
-  <link rel="stylesheet" href="static/css/style.css">
+  <title>Surya T. Bijjala | Materials Scientist</title>
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            neutral: {
+              50: '#fafafa',
+              100: '#f5f5f5',
+              200: '#e5e5e5',
+              300: '#d4d4d4',
+              400: '#a3a3a3',
+              500: '#737373',
+              600: '#525252',
+              700: '#404040',
+              800: '#262626',
+              900: '#171717',
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+            'slide-up': 'slideUp 0.8s ease-out forwards',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom refined styling */
+    .nav-link {
+      position: relative;
+      display: inline-block;
+      transition: color 0.2s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: #171717;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #171717;
+    }
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+    .nav-link.active {
+      color: #171717;
+      font-weight: 500;
+    }
+    
+    .content-link {
+      color: #171717;
+      text-decoration: none;
+      border-bottom: 1px solid #d4d4d4;
+      transition: all 0.2s ease;
+    }
+    .content-link:hover {
+      border-bottom-color: #171717;
+      background-color: rgba(23, 23, 23, 0.03);
+    }
+
+    /* Staggered animation delays */
+    .delay-100 { animation-delay: 100ms; }
+    .delay-200 { animation-delay: 200ms; }
+    .delay-300 { animation-delay: 300ms; }
+
+    /* Professional Card Hover */
+    .content-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .content-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.08);
+      border-color: #d4d4d4;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-neutral-50 text-neutral-800 antialiased min-h-screen flex flex-col lg:flex-row selection:bg-neutral-200 selection:text-neutral-900">
 
-<aside class="sidebar">
-  <a class="sidebar-logo" href="index.html">
-    <img src="static/img/apk.png" alt="Surya T. Bijjala"
-         onerror="this.style.background='#666';this.removeAttribute('onerror');">
-  </a>
-  <div class="sidebar-name">Dr. Andrzej P.&nbsp;Kądzielawa</div>
-  <div class="sidebar-tagline">Theoretical Physicist and Professional Human</div>
-  <ul class="sidebar-links">
-    <li>
-      <a href="https://github.com/Mellechowicz" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-        @Mellechowicz
-      </a>
-    </li>
-    <li>
-      <a href="https://orcid.org/0000-0003-0093-1967" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 256 256"><circle cx="128" cy="128" r="128" fill="#A6CE39"/><path d="M86 175V81h20v94H86zm10-108a13 13 0 100-26 13 13 0 000 26z" fill="#fff"/><path d="M122 81h54c51 0 51 94 0 94h-54V81zm20 17v60h31c31 0 31-60 0-60h-31z" fill="#fff"/></svg>
-        Andrzej P. Kądzielawa
-      </a>
-    </li>
-  </ul>
-  <hr class="sidebar-divider">
-  <div class="sidebar-nav-label">Navigation</div>
-  <ul class="sidebar-nav">
-    <li><a href="index.html"                class="active">Home</a></li>
-    <li><a href="cv/index.html"                          >Curriculum Vitae</a></li>
-    <li><a href="articles/index.html"                    >Articles</a></li>
-    <li><a href="computational/index.html"               >Computational Projects</a></li>
-    <li><a href="teaching.html"                          >Teaching</a></li>
-    <li><a href="projects/index.html"                    >Conferences</a></li>
-  </ul>
-</aside>
+  <!-- Sidebar -->
+  <aside class="w-full lg:w-80 xl:w-96 lg:h-screen lg:sticky lg:top-0 bg-neutral-50 lg:bg-white lg:border-r border-neutral-200 flex flex-col px-8 py-12 lg:p-14 z-10 opacity-0 animate-fade-in">
+    
+    <!-- Profile Image / Fallback -->
+    <a href="index.html" class="block w-24 h-24 lg:w-28 lg:h-28 rounded-full overflow-hidden border border-neutral-200 shadow-sm transition-transform hover:scale-105 duration-300">
+      <img src="static/img/apk.png" alt="Surya T. Bijjala" 
+           class="w-full h-full object-cover"
+           onerror="this.outerHTML='<div class=\'w-full h-full bg-neutral-100 flex items-center justify-center text-neutral-400 font-serif text-3xl font-medium tracking-tighter\'>SB</div>';">
+    </a>
 
-<div class="main">
-  <div class="content">
-    <h1 class="page-title">Welcome</h1>
-    <hr class="page-divider">
+    <!-- Identity -->
+    <div class="mt-8">
+      <h1 class="font-serif text-3xl lg:text-4xl text-neutral-900 tracking-tight leading-none mb-3">Surya T. <br/>Bijjala</h1>
+      <h2 class="text-xs font-sans tracking-[0.2em] uppercase text-neutral-500 font-medium leading-relaxed">
+        Materials Scientist<br/>
+        <span class="text-neutral-400">And Professional Human</span>
+      </h2>
+    </div>
 
-    <p>Surya T. Bijjala (Albuquerque, USA) is a Materials scientist.</p>
+    <!-- Social Links -->
+    <ul class="flex gap-4 mt-6 text-neutral-400">
+      <li>
+        <a href="https://github.com/suryabteja" target="_blank" rel="noopener" class="hover:text-neutral-900 transition-colors duration-200 flex items-center gap-2" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a href="https://orcid.org/0009-0005-4805-0829" target="_blank" rel="noopener" class="hover:text-[#A6CE39] transition-colors duration-200 flex items-center gap-2" aria-label="ORCID">
+          <svg width="18" height="18" viewBox="0 0 256 256"><circle cx="128" cy="128" r="128" fill="currentColor"/><path d="M86 175V81h20v94H86zm10-108a13 13 0 100-26 13 13 0 000 26z" fill="#fff"/><path d="M122 81h54c51 0 51 94 0 94h-54V81zm20 17v60h31c31 0 31-60 0-60h-31z" fill="#fff"/></svg>
+        </a>
+      </li>
+    </ul>
 
-    <p>He earned his PhD in Physics in Prof. Józef Spałek's group at Jagiellonian University
-    (Kraków, Poland) in 2015 with <em>summa cum laude</em> honors, following his development of
-    an original quantum chemical method (EDABI), applied in the theoretical condensed matter
-    physics. This included high-performance computations on the electronic structure of solid
-    insulating and metallic hydrogen, as well as the statistical and qualitative analysis of
-    large quantities of results.</p>
+    <div class="my-10 w-8 border-t border-neutral-300"></div>
 
-    <p>He is a co-author of high-performance computational library
-    <em><a href="https://bitbucket.org/azja/qmt/src/master/" target="_blank" rel="noopener">Quantum
-    Metallization Tools</a> (qmt)</em> and an author of generic framework for mapping density
-    functional theory output onto the Heisenberg model
-    <em><a href="https://github.com/Mellechowicz/JorG" target="_blank" rel="noopener">JorGpi</a></em>.</p>
+    <!-- Navigation -->
+    <nav class="flex-1">
+      <ul class="flex flex-col space-y-4 text-sm font-sans text-neutral-500 tracking-wide">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="cv/index.html" class="nav-link">Curriculum Vitae</a></li>
+        <li><a href="articles/index.html" class="nav-link">Articles</a></li>
+        <li><a href="computational/index.html" class="nav-link">Computational Projects</a></li>
+        <li><a href="teaching.html" class="nav-link">Teaching</a></li>
+        <li><a href="projects/index.html" class="nav-link">Conferences</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-    <p>From January 1, 2020 to December 31, 2022, he was the Principal Investigator of
-    <a href="https://gacr.cz/file-download/45672" target="_blank" rel="noopener">GAČR standard grant</a>
-    No. 20-18392S <em>Tailoring thermal stability of W-Cr based alloys for fusion
-    applications</em> (cz. <em>Modifikace teplotní stability slitin na bázi W-Cr pro aplikaci
-    ve fúzních reaktorech</em>).</p>
-  </div>
+  <!-- Main Content -->
+  <main class="flex-1 flex flex-col px-8 py-12 lg:px-20 lg:py-24 max-w-4xl opacity-0 animate-slide-up delay-100">
+    
+    <article class="flex-1">
+      <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-neutral-200 pb-8">
+        <div>
+          <h1 class="font-serif text-4xl lg:text-5xl text-neutral-900 tracking-tight mb-3">Biography</h1>
+          <p class="text-lg text-neutral-500 font-sans tracking-wide">PhD Candidate &bull; University of New Mexico</p>
+        </div>
+        <a href="cv/index.html" class="inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium text-white bg-neutral-900 hover:bg-neutral-800 transition-colors rounded shadow-sm">
+          View Curriculum Vitae
+        </a>
+      </header>
 
-  <footer>
-    &copy; <a href="https://github.com/agusmakmun" target="_blank" rel="noopener">Agus Makmun</a>
-    &mdash; Powered by Jekyll. &nbsp;|&nbsp; &copy; Andrzej P. Kądzielawa
-  </footer>
-</div>
+      <div class="prose prose-lg prose-neutral max-w-none text-neutral-700 font-light leading-relaxed space-y-10">
+        <p class="text-xl lg:text-2xl font-serif text-neutral-800 leading-snug border-l-4 border-neutral-300 pl-6 my-8 italic">
+          Dedicated to the development of novel structural alloys for extreme temperature applications through computational modeling and advanced manufacturing.
+        </p>
+
+        <div>
+          <h2 class="text-xs font-sans tracking-[0.15em] uppercase text-neutral-400 font-semibold mb-4">Current Research</h2>
+          <p>
+            Surya T. Bijjala is a graduate student pursuing his PhD in Materials Science under the guidance of Dr. Pankaj Kumar at the University of New Mexico (2021&ndash;present). His research leverages <strong>density functional theory-guided Machine Learning</strong> and <strong>Powder Metallurgy-based manufacturing</strong>, alongside Gas Tungsten Arc Melting-based welding. His core expertise includes high-performance computations on the electronic structure of refractory alloys and attention-based ML models.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+          <div class="content-card bg-white p-6 rounded-lg border border-neutral-200 shadow-sm flex flex-col">
+            <h3 class="text-xs font-sans tracking-[0.1em] text-neutral-900 mb-3 uppercase font-semibold">Software Contributions</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed flex-1 m-0">
+              Co-author of the high-performance computational library <em><a href="https://bitbucket.org/azja/qmt/src/master/" target="_blank" rel="noopener" class="content-link font-medium">Quantum Metallization Tools (qmt)</a></em> and author of the DFT-to-Heisenberg mapping framework <em><a href="https://github.com/Mellechowicz/JorG" target="_blank" rel="noopener" class="content-link font-medium">JorGpi</a></em>.
+            </p>
+          </div>
+          <div class="content-card bg-white p-6 rounded-lg border border-neutral-200 shadow-sm flex flex-col">
+            <h3 class="text-xs font-sans tracking-[0.1em] text-neutral-900 mb-3 uppercase font-semibold">Leadership</h3>
+            <p class="text-sm text-neutral-600 leading-relaxed flex-1 m-0">
+              Served as Principal Investigator (2020&ndash;2022) for the <a href="https://gacr.cz/file-download/45672" target="_blank" rel="noopener" class="content-link font-medium">GAČR standard grant</a> focusing on the thermal stability of W-Cr based alloys for fusion applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="mt-20 pt-8 border-t border-neutral-200 text-xs tracking-wider uppercase text-neutral-400 font-medium opacity-0 animate-fade-in delay-300">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+        <div>
+          &copy; <script>document.write(new Date().getFullYear())</script> Surya T. Bijjala
+        </div>
+      </div>
+    </footer>
+    
+  </main>
 
 </body>
 </html>
