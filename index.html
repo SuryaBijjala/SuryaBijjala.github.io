@@ -107,23 +107,83 @@
       border-color: #d4d4d4;
     }
 
-    /* Custom Scrollbar for internal scrolling blocks */
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
+    /* Loader Overlay & Atom Animation */
+    body.loading-active .animate-fade-in,
+    body.loading-active .animate-slide-up {
+      animation-play-state: paused;
     }
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: transparent;
+    
+    .atom-spinner {
+      position: relative;
+      width: 64px;
+      height: 64px;
+      perspective: 800px;
     }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background-color: #e5e5e5;
-      border-radius: 10px;
+    .atom-nucleus {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 12px; height: 12px;
+      background-color: #171717;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 10px rgba(23, 23, 23, 0.4);
     }
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-      background-color: #d4d4d4;
+    .atom-orbit {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 1px solid #d4d4d4;
+      border-radius: 50%;
+      transform-style: preserve-3d;
+    }
+    .atom-orbit:nth-child(2) { transform: rotateZ(0deg) rotateX(70deg); }
+    .atom-orbit:nth-child(3) { transform: rotateZ(60deg) rotateX(70deg); }
+    .atom-orbit:nth-child(4) { transform: rotateZ(120deg) rotateX(70deg); }
+    
+    .atom-electron-wrapper {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      animation: spin linear infinite;
+    }
+    .atom-orbit:nth-child(2) .atom-electron-wrapper { animation-duration: 1.2s; }
+    .atom-orbit:nth-child(3) .atom-electron-wrapper { animation-duration: 1.5s; }
+    .atom-orbit:nth-child(4) .atom-electron-wrapper { animation-duration: 1.8s; }
+    
+    .atom-electron {
+      position: absolute;
+      top: -3px; left: 50%;
+      width: 6px; height: 6px;
+      background-color: #171717;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 0 6px rgba(23, 23, 23, 0.5);
+    }
+    
+    @keyframes spin {
+      0% { transform: rotateZ(0deg); }
+      100% { transform: rotateZ(360deg); }
     }
   </style>
 </head>
-<body class="bg-neutral-50 text-neutral-800 antialiased min-h-screen flex flex-col lg:flex-row selection:bg-neutral-200 selection:text-neutral-900">
+<body class="bg-neutral-50 text-neutral-800 antialiased min-h-screen flex flex-col lg:flex-row selection:bg-neutral-200 selection:text-neutral-900 loading-active">
+
+  <!-- Page Loader Overlay -->
+  <div id="page-loader" class="fixed inset-0 z-[100] bg-neutral-50 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out pointer-events-none">
+    <div class="atom-spinner mb-6">
+      <div class="atom-nucleus"></div>
+      <div class="atom-orbit">
+        <div class="atom-electron-wrapper"><div class="atom-electron"></div></div>
+      </div>
+      <div class="atom-orbit">
+        <div class="atom-electron-wrapper"><div class="atom-electron"></div></div>
+      </div>
+      <div class="atom-orbit">
+        <div class="atom-electron-wrapper"><div class="atom-electron"></div></div>
+      </div>
+    </div>
+    <div class="text-neutral-500 font-sans tracking-[0.25em] text-xs uppercase font-medium">Loading</div>
+  </div>
 
   <!-- Sidebar -->
   <aside class="w-full lg:w-[26rem] xl:w-[30rem] lg:h-screen lg:sticky lg:top-0 bg-neutral-50 lg:bg-white lg:border-r border-neutral-200 flex flex-col px-8 py-12 lg:p-14 z-10 opacity-0 animate-fade-in">
