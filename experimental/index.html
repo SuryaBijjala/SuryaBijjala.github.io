@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Computational Projects | Surya T. Bijjala</title>
+  <title>Experimental Projects | Surya T. Bijjala</title>
   
   <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -124,7 +124,24 @@
     }
   </style>
 </head>
-<body class="bg-neutral-50 text-neutral-800 antialiased min-h-screen flex flex-col lg:flex-row selection:bg-neutral-200 selection:text-neutral-900">
+<body class="bg-neutral-50 text-neutral-800 antialiased min-h-screen flex flex-col lg:flex-row selection:bg-neutral-200 selection:text-neutral-900 loading-active">
+
+  <!-- Page Loader Overlay -->
+  <div id="page-loader" class="fixed inset-0 z-[100] bg-neutral-50 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out pointer-events-none">
+    <div class="atom-spinner mb-6">
+      <div class="atom-nucleus"></div>
+      <div class="atom-orbit">
+        <div class="atom-electron-wrapper"><div class="atom-electron"></div></div>
+      </div>
+      <div class="atom-orbit">
+        <div class="atom-electron-wrapper"><div class="atom-electron"></div></div>
+      </div>
+      <div class="atom-orbit">
+        <div class="atom-electron-wrapper"><div class="atom-electron"></div></div>
+      </div>
+    </div>
+    <div class="text-neutral-500 font-sans tracking-[0.25em] text-xs uppercase font-medium">Loading</div>
+  </div>
 
   <!-- Sidebar -->
   <aside class="w-full lg:w-[26rem] xl:w-[30rem] lg:h-screen lg:sticky lg:top-0 bg-neutral-50 lg:bg-white lg:border-r border-neutral-200 flex flex-col px-8 py-12 lg:p-14 z-10 opacity-0 animate-fade-in custom-scrollbar overflow-y-auto">
@@ -178,14 +195,14 @@
 
     <!-- Navigation -->
     <nav class="flex-1 shrink-0 pb-8">
-      <ul class="flex flex-col space-y-4 text-base font-sans text-neutral-500 tracking-wide">
+            <ul class="flex flex-col space-y-4 text-base font-sans text-neutral-500 tracking-wide">
         <li><a href="../index.html" class="nav-link">Home</a></li>
         <li><a href="../cv/index.html" class="nav-link">Curriculum Vitae</a></li>
         <li><a href="../articles/index.html" class="nav-link">Articles</a></li>
-        <li><a href="../computational/index.html" class="nav-link active">Computational Projects</a></li>
-        <li><a href="../experimental/index.html" class="nav-link">Experimental Projects</a></li>
-        <li><a href="../teaching.html" class="nav-link">Teaching</a></li>
+        <li><a href="../computational/index.html" class="nav-link">Computational Projects</a></li>
+        <li><a href="../experimental/index.html" class="nav-link active">Experimental Projects</a></li>
         <li><a href="../projects/index.html" class="nav-link">Conferences</a></li>
+        <li><a href="../collaborate.html" class="nav-link">Collaborations</a></li>
       </ul>
     </nav>
   </aside>
@@ -193,22 +210,22 @@
   <!-- Main Content -->
   <main class="flex-1 flex flex-col px-8 py-12 lg:px-20 lg:py-24 w-full opacity-0 animate-slide-up delay-100 max-w-5xl">
     
-    <article class="flex-1">
+        <article class="flex-1">
       <header class="mb-14 flex flex-col gap-3 border-b border-neutral-200 pb-8">
-        <h1 class="font-serif text-5xl lg:text-6xl text-neutral-900 tracking-tight">Computational Projects</h1>
+        <h1 class="font-serif text-5xl lg:text-6xl text-neutral-900 tracking-tight">Experimental Projects</h1>
       </header>
 
-      <!-- Current Projects (Horizontal Scroll Carousel) -->
+      <!-- Current Experimental Projects (Horizontal Scroll Carousel) -->
       <section class="mb-16 opacity-0 animate-slide-up delay-200">
         <h2 class="text-2xl font-serif text-neutral-900 mb-6 tracking-tight">Current Projects</h2>
         
         <!-- Horizontal Scroll Container -->
         <div class="flex overflow-x-auto gap-6 pb-6 custom-scrollbar snap-x snap-mandatory">
           
-          <!-- Current Project Card 1 -->
-          <a href="#" target="_blank" rel="noopener" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
+          <!-- Project Card 1 -->
+          <a href="#" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
             <div class="w-full h-48 shrink-0 rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
-              <img src="../static/img/current-project-1.jpg" alt="Current Project 1" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+              <img src="../static/img/exp-project-1.jpg" alt="W-Cr Alloy Synthesis" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
                    onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>Project Image</div>';">
             </div>
             <div class="flex-1 flex flex-col">
@@ -216,18 +233,18 @@
                 <span class="inline-block px-2.5 py-1 bg-green-50 text-green-700 text-xs font-sans font-bold tracking-widest uppercase rounded border border-green-200">Ongoing</span>
               </div>
               <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug mb-3">
-                Machine Learning Potentials for Novel Alloys
+                W-Cr Alloy Synthesis &amp; Characterization
               </h3>
               <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0 mt-auto">
-                Development of high-fidelity interatomic potentials combining ab-initio data with neural networks.
+                Powder metallurgy fabrication of W-Cr composites for fusion-relevant extreme-temperature applications.
               </p>
             </div>
           </a>
 
-          <!-- Current Project Card 2 -->
-          <a href="#" target="_blank" rel="noopener" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
+          <!-- Project Card 2 -->
+          <a href="#" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
             <div class="w-full h-48 shrink-0 rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
-              <img src="../static/img/current-project-2.jpg" alt="Current Project 2" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+              <img src="../static/img/exp-project-2.jpg" alt="Gas Tungsten Arc Melting" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
                    onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>Project Image</div>';">
             </div>
             <div class="flex-1 flex flex-col">
@@ -235,18 +252,18 @@
                 <span class="inline-block px-2.5 py-1 bg-green-50 text-green-700 text-xs font-sans font-bold tracking-widest uppercase rounded border border-green-200">Ongoing</span>
               </div>
               <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug mb-3">
-                High-Entropy Alloys Thermodynamic Modeling
+                Gas Tungsten Arc Melting-Based Welding
               </h3>
               <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0 mt-auto">
-                CALPHAD and DFT investigations into the phase stability of multi-principal element alloys.
+                Optimizing GTAM welding parameters for refractory alloy joints in high-radiation environments.
               </p>
             </div>
           </a>
 
-          <!-- Current Project Card 3 (Example) -->
-          <a href="#" target="_blank" rel="noopener" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
+          <!-- Project Card 3 -->
+          <a href="#" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
             <div class="w-full h-48 shrink-0 rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
-              <img src="../static/img/current-project-3.jpg" alt="Current Project 3" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+              <img src="../static/img/exp-project-3.jpg" alt="Microstructural Analysis" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
                    onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>Project Image</div>';">
             </div>
             <div class="flex-1 flex flex-col">
@@ -254,10 +271,10 @@
                 <span class="inline-block px-2.5 py-1 bg-green-50 text-green-700 text-xs font-sans font-bold tracking-widest uppercase rounded border border-green-200">Ongoing</span>
               </div>
               <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug mb-3">
-                Computational Defect Analysis
+                Microstructural &amp; Mechanical Characterization
               </h3>
               <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0 mt-auto">
-                Studying grain boundary segregation and defect dynamics using large-scale molecular dynamics.
+                SEM/EBSD analysis of grain boundary structure and nanoindentation studies on ultrafine-grained composites.
               </p>
             </div>
           </a>
@@ -265,63 +282,55 @@
         </div>
       </section>
 
-      <!-- High-Performance Computing Allocations (Vertical List) -->
+      <!-- Completed Experiments (Vertical List) -->
       <section class="opacity-0 animate-slide-up delay-300">
-        <h2 class="text-2xl font-serif text-neutral-900 mb-6 tracking-tight">High-Performance Computing Allocations</h2>
+        <h2 class="text-2xl font-serif text-neutral-900 mb-6 tracking-tight">Completed Studies</h2>
         
         <div class="space-y-6">
           
-          <!-- OPEN-25-5 -->
-          <a href="https://www.it4i.cz/en/for-users/open-access-competition/25th-call-results" target="_blank" rel="noopener" class="content-card group flex flex-col md:flex-row bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-6 md:gap-8">
-            <!-- Image Wrapper -->
+          <!-- Study 1 -->
+          <div class="content-card group flex flex-col md:flex-row bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden gap-6 md:gap-8">
             <div class="w-full md:w-48 lg:w-56 shrink-0 h-48 md:h-auto rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
-              <img src="../static/img/project-25-5.jpg" alt="OPEN-25-5" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+              <img src="../static/img/exp-study-1.jpg" alt="W-Cr Elastic Properties Study" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
                   onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>No Image</div>';">
             </div>
-            <!-- Content -->
             <div class="flex-1 flex flex-col justify-center">
               <div class="mb-3">
                 <span class="inline-block px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs font-sans font-bold tracking-widest uppercase rounded">2022</span>
               </div>
               <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-3">
                 <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug">
-                  OPEN-25-5: Designing effective interatomic potentials for Tungsten-based alloys
+                  Elastic Properties of Single Grains in Ultrafine-Grained W-Cr Composite
                 </h3>
-                <span class="inline-flex items-center justify-center px-3 py-1 text-xs font-sans tracking-widest uppercase font-semibold text-neutral-500 border border-neutral-200 rounded group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition-colors shrink-0">
-                  View
-                </span>
               </div>
               <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0">
-                Barbora CPU 33 000 nodehours, Karolina CPU 24 000 nodehours, Karolina GPU 11 800 nodehours
+                Nanoindentation and SEM/EBSD study correlating grain orientation to local elastic moduli in sintered W-Cr specimens.
               </p>
             </div>
-          </a>
+          </div>
 
-          <!-- OPEN-24-52 -->
-          <a href="https://www.it4i.cz/en/for-users/open-access-competition/24th-call-results" target="_blank" rel="noopener" class="content-card group flex flex-col md:flex-row bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-6 md:gap-8">
+          <!-- Study 2 -->
+          <div class="content-card group flex flex-col md:flex-row bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden gap-6 md:gap-8">
             <div class="w-full md:w-48 lg:w-56 shrink-0 h-48 md:h-auto rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
-              <img src="../static/img/project-24-52.jpg" alt="OPEN-24-52" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+              <img src="../static/img/exp-study-2.jpg" alt="Ti-6Al-4V LDED Study" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
                   onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>No Image</div>';">
             </div>
             <div class="flex-1 flex flex-col justify-center">
               <div class="mb-3">
-                <span class="inline-block px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs font-sans font-bold tracking-widest uppercase rounded">2022</span>
+                <span class="inline-block px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs font-sans font-bold tracking-widest uppercase rounded">2025</span>
               </div>
               <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-3">
                 <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug">
-                  OPEN-24-52: Symmetric Special Quasirandom Structure Generator
+                  Mechanical Property Heterogeneity in Laser-DED Ti-6Al-4V
                 </h3>
-                <span class="inline-flex items-center justify-center px-3 py-1 text-xs font-sans tracking-widest uppercase font-semibold text-neutral-500 border border-neutral-200 rounded group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition-colors shrink-0">
-                  View
-                </span>
               </div>
               <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0">
-                Barbora CPU 13 000 nodehours, Karolina CPU 12 400 nodehours
+                Evaluation of spatial variations in hardness, tensile strength, and microstructure across laser-directed energy deposited Ti-6Al-4V builds.
               </p>
             </div>
-          </a>
+          </div>
           
-        </div> <!-- End of space-y-6 vertical list -->
+        </div>
       </section>
 
     </article>
@@ -341,6 +350,20 @@
     </footer>
     
   </main>
+
+  <script>
+    // Page Loader Logic
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        const loader = document.getElementById('page-loader');
+        if (loader) {
+          loader.classList.add('opacity-0');
+          document.body.classList.remove('loading-active');
+          setTimeout(() => { loader.remove(); }, 500);
+        }
+      }, 1000);
+    });
+  </script>
 
 </body>
 </html>
