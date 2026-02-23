@@ -107,9 +107,10 @@
       border-color: #d4d4d4;
     }
 
-    /* Custom Scrollbar */
+    /* Custom Scrollbar - Updated for both vertical and horizontal */
     .custom-scrollbar::-webkit-scrollbar {
       width: 6px;
+      height: 8px; /* Added for horizontal scrolling */
     }
     .custom-scrollbar::-webkit-scrollbar-track {
       background: transparent;
@@ -192,62 +193,137 @@
   <main class="flex-1 flex flex-col px-8 py-12 lg:px-20 lg:py-24 w-full opacity-0 animate-slide-up delay-100 max-w-5xl">
     
     <article class="flex-1">
-      <header class="mb-12 flex flex-col gap-3 border-b border-neutral-200 pb-8">
+      <header class="mb-14 flex flex-col gap-3 border-b border-neutral-200 pb-8">
         <h1 class="font-serif text-5xl lg:text-6xl text-neutral-900 tracking-tight">Computational Projects</h1>
-        <p class="text-xl text-neutral-500 font-sans tracking-wide">High-Performance Computing Allocations</p>
       </header>
 
-      <div class="space-y-6 opacity-0 animate-slide-up delay-200">
+      <!-- Current Projects (Horizontal Scroll Carousel) -->
+      <section class="mb-16 opacity-0 animate-slide-up delay-200">
+        <h2 class="text-2xl font-serif text-neutral-900 mb-6 tracking-tight">Current Projects</h2>
         
-        <!-- OPEN-25-5 -->
-        <a href="https://www.it4i.cz/en/for-users/open-access-competition/25th-call-results" target="_blank" rel="noopener" class="content-card group flex flex-col md:flex-row bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-6 md:gap-8">
-          <!-- Image Wrapper -->
-          <div class="w-full md:w-48 lg:w-56 shrink-0 h-48 md:h-auto rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
-            <img src="../static/img/project-25-5.jpg" alt="OPEN-25-5" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
-                 onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>No Image</div>';">
-          </div>
-          <!-- Content -->
-          <div class="flex-1 flex flex-col justify-center">
-            <div class="mb-3">
-              <span class="inline-block px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs font-sans font-bold tracking-widest uppercase rounded">2022</span>
+        <!-- Horizontal Scroll Container -->
+        <div class="flex overflow-x-auto gap-6 pb-6 custom-scrollbar snap-x snap-mandatory">
+          
+          <!-- Current Project Card 1 -->
+          <a href="#" target="_blank" rel="noopener" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
+            <div class="w-full h-48 shrink-0 rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
+              <img src="../static/img/current-project-1.jpg" alt="Current Project 1" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>Project Image</div>';">
             </div>
-            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-3">
-              <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug">
-                OPEN-25-5: Designing effective interatomic potentials for Tungsten-based alloys
+            <div class="flex-1 flex flex-col">
+              <div class="mb-3 flex justify-between items-center">
+                <span class="inline-block px-2.5 py-1 bg-green-50 text-green-700 text-xs font-sans font-bold tracking-widest uppercase rounded border border-green-200">Ongoing</span>
+              </div>
+              <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug mb-3">
+                Machine Learning Potentials for Novel Alloys
               </h3>
-              <span class="inline-flex items-center justify-center px-3 py-1 text-xs font-sans tracking-widest uppercase font-semibold text-neutral-500 border border-neutral-200 rounded group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition-colors shrink-0">
-                View
-              </span>
+              <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0 mt-auto">
+                Development of high-fidelity interatomic potentials combining ab-initio data with neural networks.
+              </p>
             </div>
-            <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0">
-              Barbora CPU 33 000 nodehours, Karolina CPU 24 000 nodehours, Karolina GPU 11 800 nodehours
-            </p>
-          </div>
-        </a>
+          </a>
 
-        <!-- OPEN-24-52 -->
-        <a href="https://www.it4i.cz/en/for-users/open-access-competition/24th-call-results" target="_blank" rel="noopener" class="content-card group flex flex-col md:flex-row bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-6 md:gap-8">
-          <div class="w-full md:w-48 lg:w-56 shrink-0 h-48 md:h-auto rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
-            <img src="../static/img/project-24-52.jpg" alt="OPEN-24-52" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
-                 onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>No Image</div>';">
-          </div>
-          <div class="flex-1 flex flex-col justify-center">
-            <div class="mb-3">
-              <span class="inline-block px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs font-sans font-bold tracking-widest uppercase rounded">2022</span>
+          <!-- Current Project Card 2 -->
+          <a href="#" target="_blank" rel="noopener" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
+            <div class="w-full h-48 shrink-0 rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
+              <img src="../static/img/current-project-2.jpg" alt="Current Project 2" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>Project Image</div>';">
             </div>
-            <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-3">
-              <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug">
-                OPEN-24-52: Symmetric Special Quasirandom Structure Generator
+            <div class="flex-1 flex flex-col">
+              <div class="mb-3 flex justify-between items-center">
+                <span class="inline-block px-2.5 py-1 bg-green-50 text-green-700 text-xs font-sans font-bold tracking-widest uppercase rounded border border-green-200">Ongoing</span>
+              </div>
+              <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug mb-3">
+                High-Entropy Alloys Thermodynamic Modeling
               </h3>
-              <span class="inline-flex items-center justify-center px-3 py-1 text-xs font-sans tracking-widest uppercase font-semibold text-neutral-500 border border-neutral-200 rounded group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition-colors shrink-0">
-                View
-              </span>
+              <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0 mt-auto">
+                CALPHAD and DFT investigations into the phase stability of multi-principal element alloys.
+              </p>
             </div>
-            <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0">
-              Barbora CPU 13 000 nodehours, Karolina CPU 12 400 nodehours
-            </p>
-          </div>
-        </a>
+          </a>
+
+          <!-- Current Project Card 3 (Example) -->
+          <a href="#" target="_blank" rel="noopener" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
+            <div class="w-full h-48 shrink-0 rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
+              <img src="../static/img/current-project-3.jpg" alt="Current Project 3" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>Project Image</div>';">
+            </div>
+            <div class="flex-1 flex flex-col">
+              <div class="mb-3 flex justify-between items-center">
+                <span class="inline-block px-2.5 py-1 bg-green-50 text-green-700 text-xs font-sans font-bold tracking-widest uppercase rounded border border-green-200">Ongoing</span>
+              </div>
+              <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug mb-3">
+                Computational Defect Analysis
+              </h3>
+              <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0 mt-auto">
+                Studying grain boundary segregation and defect dynamics using large-scale molecular dynamics.
+              </p>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- High-Performance Computing Allocations (Vertical List) -->
+      <section class="opacity-0 animate-slide-up delay-300">
+        <h2 class="text-2xl font-serif text-neutral-900 mb-6 tracking-tight">High-Performance Computing Allocations</h2>
+        
+        <div class="space-y-6">
+          
+          <!-- OPEN-25-5 -->
+          <a href="https://www.it4i.cz/en/for-users/open-access-competition/25th-call-results" target="_blank" rel="noopener" class="content-card group flex flex-col md:flex-row bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-6 md:gap-8">
+            <!-- Image Wrapper -->
+            <div class="w-full md:w-48 lg:w-56 shrink-0 h-48 md:h-auto rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
+              <img src="../static/img/project-25-5.jpg" alt="OPEN-25-5" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>No Image</div>';">
+            </div>
+            <!-- Content -->
+            <div class="flex-1 flex flex-col justify-center">
+              <div class="mb-3">
+                <span class="inline-block px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs font-sans font-bold tracking-widest uppercase rounded">2022</span>
+              </div>
+              <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-3">
+                <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug">
+                  OPEN-25-5: Designing effective interatomic potentials for Tungsten-based alloys
+                </h3>
+                <span class="inline-flex items-center justify-center px-3 py-1 text-xs font-sans tracking-widest uppercase font-semibold text-neutral-500 border border-neutral-200 rounded group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition-colors shrink-0">
+                  View
+                </span>
+              </div>
+              <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0">
+                Barbora CPU 33 000 nodehours, Karolina CPU 24 000 nodehours, Karolina GPU 11 800 nodehours
+              </p>
+            </div>
+          </a>
+
+          <!-- OPEN-24-52 -->
+          <a href="https://www.it4i.cz/en/for-users/open-access-competition/24th-call-results" target="_blank" rel="noopener" class="content-card group flex flex-col md:flex-row bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-6 md:gap-8">
+            <div class="w-full md:w-48 lg:w-56 shrink-0 h-48 md:h-auto rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
+              <img src="../static/img/project-24-52.jpg" alt="OPEN-24-52" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                  onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>No Image</div>';">
+            </div>
+            <div class="flex-1 flex flex-col justify-center">
+              <div class="mb-3">
+                <span class="inline-block px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs font-sans font-bold tracking-widest uppercase rounded">2022</span>
+              </div>
+              <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-3">
+                <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug">
+                  OPEN-24-52: Symmetric Special Quasirandom Structure Generator
+                </h3>
+                <span class="inline-flex items-center justify-center px-3 py-1 text-xs font-sans tracking-widest uppercase font-semibold text-neutral-500 border border-neutral-200 rounded group-hover:bg-neutral-900 group-hover:text-white group-hover:border-neutral-900 transition-colors shrink-0">
+                  View
+                </span>
+              </div>
+              <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0">
+                Barbora CPU 13 000 nodehours, Karolina CPU 12 400 nodehours
+              </p>
+            </div>
+          </a>
+          
+        </div> <!-- End of space-y-6 vertical list -->
+      </section>
+
+    </article>
 
     <!-- Footer -->
     <footer class="mt-20 pt-8 border-t border-neutral-200 text-sm tracking-wider uppercase text-neutral-400 font-medium opacity-0 animate-fade-in delay-300">
