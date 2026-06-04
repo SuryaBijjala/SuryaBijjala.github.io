@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conferences - Surya T. Bijjala</title>
   
-  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -171,7 +169,6 @@
 </head>
 <body class="bg-neutral-50 text-neutral-800 antialiased min-h-screen flex flex-col lg:flex-row selection:bg-neutral-200 selection:text-neutral-900">
 
-  <!-- Page Loader Overlay -->
   <div id="page-loader" class="fixed inset-0 z-[100] bg-neutral-50 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out pointer-events-none">
     <div class="atom-spinner mb-6">
       <div class="atom-nucleus"></div>
@@ -188,17 +185,14 @@
     <div class="text-neutral-500 font-sans tracking-[0.25em] text-xs uppercase font-medium">Loading</div>
   </div>
 
-  <!-- Sidebar -->
   <aside class="w-full lg:w-[26rem] xl:w-[30rem] lg:h-screen lg:sticky lg:top-0 bg-neutral-50 lg:bg-white lg:border-r border-neutral-200 flex flex-col px-8 py-12 lg:p-14 z-10 opacity-0 animate-fade-in">
     
-    <!-- Profile Image / Fallback -->
     <a href="../index.html" class="block w-48 h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border border-neutral-200 shadow-sm transition-transform hover:scale-105 duration-300">
       <img src="../static/img/apk.png" alt="Surya T. Bijjala" 
            class="w-full h-full object-cover"
            onerror="this.outerHTML='<div class=\'w-full h-full bg-neutral-100 flex items-center justify-center text-neutral-400 font-serif text-7xl font-medium tracking-tighter\'>SB</div>';">
     </a>
 
-    <!-- Identity -->
     <div class="mt-8">
       <h1 class="font-serif text-4xl lg:text-5xl text-neutral-900 tracking-tight leading-none mb-3">Surya T. <br/>Bijjala</h1>
       <h2 class="text-sm font-sans tracking-[0.2em] uppercase text-neutral-500 font-medium leading-relaxed">
@@ -207,7 +201,6 @@
       </h2>
     </div>
 
-    <!-- Social Links -->
     <ul class="flex flex-wrap gap-4 mt-6 text-neutral-400">
       <li>
         <a href="https://github.com/suryabteja" target="_blank" rel="noopener" class="hover:text-neutral-900 transition-colors duration-200 flex items-center gap-2" aria-label="GitHub">
@@ -238,7 +231,6 @@
 
     <div class="my-10 w-8 border-t border-neutral-300"></div>
 
-    <!-- Navigation -->
     <nav class="flex-1">
             <ul class="flex flex-col space-y-4 text-base font-sans text-neutral-500 tracking-wide">
         <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -252,7 +244,6 @@
     </nav>
   </aside>
 
-  <!-- Main Content -->
   <main class="flex-1 flex flex-col px-8 py-12 lg:px-20 lg:py-24 w-full opacity-0 animate-slide-up delay-100">
     
     <article class="flex-1 max-w-6xl">
@@ -261,9 +252,9 @@
         <p class="text-xl text-neutral-500 font-sans tracking-wide">Public activity, presentations, and posters</p>
       </header>
 
-      <!-- Tag cloud for filtering -->
       <div class="flex flex-wrap gap-2 mb-12" id="tagCloud">
         <span class="tag-btn selected px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400 hover:text-neutral-900 text-sm font-medium cursor-pointer select-none" data-tag="All">All</span>
+        <span class="tag-btn px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400 hover:text-neutral-900 text-sm font-medium cursor-pointer select-none" data-tag="special quasirandom structures">special quasirandom structures</span>
         <span class="tag-btn px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400 hover:text-neutral-900 text-sm font-medium cursor-pointer select-none" data-tag="Superconductivity">Superconductivity</span>
         <span class="tag-btn px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400 hover:text-neutral-900 text-sm font-medium cursor-pointer select-none" data-tag="Hydrogen">Hydrogen</span>
         <span class="tag-btn px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400 hover:text-neutral-900 text-sm font-medium cursor-pointer select-none" data-tag="Metallization">Metallization</span>
@@ -280,16 +271,40 @@
         <span class="tag-btn px-4 py-1.5 rounded-full border border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400 hover:text-neutral-900 text-sm font-medium cursor-pointer select-none" data-tag="CeCoIn5">CeCoIn5</span>
       </div>
 
-      <!-- Conference Entries -->
       <div class="space-y-6 lg:space-y-8">
 
-        <!-- Entry 1 -->
+        <div class="content-card group bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col sm:flex-row gap-6 lg:gap-8" data-tags="special quasirandom structures ab initio HPC Python AI">
+          <div class="w-full sm:w-40 lg:w-56 shrink-0 h-48 sm:h-auto relative rounded-md overflow-hidden bg-neutral-100 border border-neutral-100">
+            <img src="../static/projects/atomic-configs.jpg" alt="Presentation thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=500&q=80'">
+          </div>
+          <div class="flex-1 flex flex-col justify-between gap-4">
+            <div>
+              <h3 class="font-serif text-xl lg:text-2xl text-neutral-900 mb-4 leading-snug">
+                <a href="../static/projects/atomic-configs.pdf" target="_blank" rel="noopener" class="hover:text-neutral-500 transition-colors">
+                  Generation of unique atomic configurations
+                </a>
+              </h3>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">special quasirandom structures</span>
+                <span class="px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">ab initio</span>
+                <span class="px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">Python</span>
+                <span class="px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">HPC</span>
+                <span class="px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">AI</span>
+              </div>
+            </div>
+            <div class="mt-2 flex flex-col sm:flex-row sm:items-center justify-between border-t border-neutral-100 pt-4 text-sm font-sans gap-3">
+              <span class="text-neutral-500">Department of Mechanical Engineering, University of New Mexico, Apr 2026</span>
+              <a href="../static/projects/atomic-configs.pdf" target="_blank" rel="noopener" class="font-medium text-neutral-900 hover:text-neutral-600 transition-colors inline-flex items-center gap-1.5 shrink-0">
+                View Document <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div class="content-card group bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col sm:flex-row gap-6 lg:gap-8" data-tags="Superconductivity Conventional superconductivity Phonons Anharmonicity Sparse matrices Exact diagonalization Lanczos method Correlated bands Extended Hubbard model Exchange interaction Frustration Hydrogen Solid Hydrogen Multi-level parallelism Metallization HPC ab initio Quantum Mechanics Variational wave function Electronic structure Extreme pressure">
-          <!-- Image Column -->
           <div class="w-full sm:w-40 lg:w-56 shrink-0 h-48 sm:h-auto relative rounded-md overflow-hidden bg-neutral-100 border border-neutral-100">
             <img src="../static/projects/krakow2024.jpg" alt="Presentation thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=500&q=80'">
           </div>
-          <!-- Content Column -->
           <div class="flex-1 flex flex-col justify-between gap-4">
             <div>
               <h3 class="font-serif text-xl lg:text-2xl text-neutral-900 mb-4 leading-snug">
@@ -317,7 +332,6 @@
           </div>
         </div>
 
-        <!-- Entry 2 -->
         <div class="content-card group bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col sm:flex-row gap-6 lg:gap-8" data-tags="refractory metals tungsten-chromium alloys miscibility gap ab initio special quasirandom structures">
           <div class="w-full sm:w-40 lg:w-56 shrink-0 h-48 sm:h-auto relative rounded-md overflow-hidden bg-neutral-100 border border-neutral-100">
             <img src="../static/projects/lausanne2022.jpg" alt="Presentation thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=500&q=80'">
@@ -346,7 +360,6 @@
           </div>
         </div>
 
-        <!-- Entry 3 -->
         <div class="content-card group bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col sm:flex-row gap-6 lg:gap-8" data-tags="refractory metals tungsten-chromium alloys miscibility gap ab initio special quasirandom structures">
           <div class="w-full sm:w-40 lg:w-56 shrink-0 h-48 sm:h-auto relative rounded-md overflow-hidden bg-neutral-100 border border-neutral-100">
             <img src="../static/projects/krakow2021.jpg" alt="Presentation thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" onerror="this.src='https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=500&q=80'">
@@ -374,11 +387,8 @@
           </div>
         </div>
 
-      </div><!-- /content space-y -->
+      </div></article>
 
-    </article>
-
-    <!-- Footer -->
     <footer class="mt-20 pt-8 border-t border-neutral-200 text-sm tracking-wider uppercase text-neutral-400 font-medium opacity-0 animate-fade-in delay-300">
       <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
