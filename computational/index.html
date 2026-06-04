@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Computational Projects | Surya T. Bijjala</title>
   
-  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -184,7 +182,6 @@
 </head>
 <body class="bg-neutral-50 text-neutral-800 antialiased min-h-screen flex flex-col lg:flex-row selection:bg-neutral-200 selection:text-neutral-900">
 
-  <!-- Page Loader Overlay -->
   <div id="page-loader" class="fixed inset-0 z-[100] bg-neutral-50 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out pointer-events-none">
     <div class="atom-spinner mb-6">
       <div class="atom-nucleus"></div>
@@ -201,17 +198,14 @@
     <div class="text-neutral-500 font-sans tracking-[0.25em] text-xs uppercase font-medium">Loading</div>
   </div>
 
-  <!-- Sidebar -->
   <aside class="w-full lg:w-[26rem] xl:w-[30rem] lg:h-screen lg:sticky lg:top-0 bg-neutral-50 lg:bg-white lg:border-r border-neutral-200 flex flex-col px-8 py-12 lg:p-14 z-10 opacity-0 animate-fade-in custom-scrollbar overflow-y-auto">
     
-    <!-- Profile Image / Fallback -->
     <a href="../index.html" class="block w-48 h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border border-neutral-200 shadow-sm transition-transform hover:scale-105 duration-300 shrink-0">
       <img src="../static/img/apk.png" alt="Surya T. Bijjala" 
            class="w-full h-full object-cover"
            onerror="this.outerHTML='<div class=\'w-full h-full bg-neutral-100 flex items-center justify-center text-neutral-400 font-serif text-7xl font-medium tracking-tighter\'>SB</div>';">
     </a>
 
-    <!-- Identity -->
     <div class="mt-8 shrink-0">
       <h1 class="font-serif text-4xl lg:text-5xl text-neutral-900 tracking-tight leading-none mb-3">Surya T. <br/>Bijjala</h1>
       <h2 class="text-sm font-sans tracking-[0.2em] uppercase text-neutral-500 font-medium leading-relaxed">
@@ -220,7 +214,6 @@
       </h2>
     </div>
 
-    <!-- Social Links -->
     <ul class="flex flex-wrap gap-4 mt-6 text-neutral-400 shrink-0">
       <li>
         <a href="https://github.com/suryabteja" target="_blank" rel="noopener" class="hover:text-neutral-900 transition-colors duration-200 flex items-center gap-2" aria-label="GitHub">
@@ -251,7 +244,6 @@
 
     <div class="my-10 w-8 border-t border-neutral-300 shrink-0"></div>
 
-    <!-- Navigation -->
     <nav class="flex-1 shrink-0 pb-8">
             <ul class="flex flex-col space-y-4 text-base font-sans text-neutral-500 tracking-wide">
         <li><a href="../index.html" class="nav-link">Home</a></li>
@@ -265,7 +257,6 @@
     </nav>
   </aside>
 
-  <!-- Main Content -->
   <main class="flex-1 flex flex-col px-8 py-12 lg:px-20 lg:py-24 w-full opacity-0 animate-slide-up delay-100 max-w-5xl">
     
     <article class="flex-1">
@@ -273,14 +264,11 @@
         <h1 class="font-serif text-5xl lg:text-6xl text-neutral-900 tracking-tight">Computational Projects</h1>
       </header>
 
-      <!-- Current Projects (Horizontal Scroll Carousel) -->
       <section class="mb-16 opacity-0 animate-slide-up delay-200">
         <h2 class="text-2xl font-serif text-neutral-900 mb-6 tracking-tight">Current Projects</h2>
         
-        <!-- Horizontal Scroll Container -->
         <div class="flex overflow-x-auto gap-6 pb-6 custom-scrollbar snap-x snap-mandatory">
           
-          <!-- Current Project Card 1 -->
           <a href="#" target="_blank" rel="noopener" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
             <div class="w-full h-48 shrink-0 rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
               <img src="../static/img/current-project-1.jpg" alt="Current Project 1" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
@@ -299,7 +287,6 @@
             </div>
           </a>
 
-          <!-- Current Project Card 2 -->
           <a href="#" target="_blank" rel="noopener" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
             <div class="w-full h-48 shrink-0 rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
               <img src="../static/img/current-project-2.jpg" alt="Current Project 2" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
@@ -318,7 +305,6 @@
             </div>
           </a>
 
-          <!-- Current Project Card 3 (Example) -->
           <a href="#" target="_blank" rel="noopener" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
             <div class="w-full h-48 shrink-0 rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
               <img src="../static/img/current-project-3.jpg" alt="Current Project 3" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
@@ -337,23 +323,37 @@
             </div>
           </a>
 
+          <a href="#" target="_blank" rel="noopener" class="snap-start shrink-0 w-[85vw] sm:w-[360px] md:w-[420px] content-card group flex flex-col bg-white p-6 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-5">
+            <div class="w-full h-48 shrink-0 rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
+              <img src="../static/img/current-project-4.jpg" alt="Generation of Symmetrically Unique Structures" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
+                   onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>Project Image</div>';">
+            </div>
+            <div class="flex-1 flex flex-col">
+              <div class="mb-3 flex justify-between items-center">
+                <span class="inline-block px-2.5 py-1 bg-green-50 text-green-700 text-xs font-sans font-bold tracking-widest uppercase rounded border border-green-200">Ongoing</span>
+              </div>
+              <h3 class="text-xl font-serif text-neutral-900 group-hover:text-black leading-snug mb-3">
+                Generation of Symmetrically Unique Structures
+              </h3>
+              <p class="text-sm font-sans text-neutral-500 tracking-wide leading-relaxed m-0 mt-auto">
+                Automated algorithmic generation and classification of symmetrically distinct configurations for materials design and simulation.
+              </p>
+            </div>
+          </a>
+
         </div>
       </section>
 
-      <!-- High-Performance Computing Allocations (Vertical List) -->
       <section class="opacity-0 animate-slide-up delay-300">
         <h2 class="text-2xl font-serif text-neutral-900 mb-6 tracking-tight">High-Performance Computing Allocations</h2>
         
         <div class="space-y-6">
           
-          <!-- OPEN-25-5 -->
           <a href="https://www.it4i.cz/en/for-users/open-access-competition/25th-call-results" target="_blank" rel="noopener" class="content-card group flex flex-col md:flex-row bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-6 md:gap-8">
-            <!-- Image Wrapper -->
             <div class="w-full md:w-48 lg:w-56 shrink-0 h-48 md:h-auto rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
               <img src="../static/img/project-25-5.jpg" alt="OPEN-25-5" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
                   onerror="this.outerHTML='<div class=\'w-full h-full flex items-center justify-center text-neutral-400 font-sans text-xs tracking-widest uppercase absolute inset-0\'>No Image</div>';">
             </div>
-            <!-- Content -->
             <div class="flex-1 flex flex-col justify-center">
               <div class="mb-3">
                 <span class="inline-block px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs font-sans font-bold tracking-widest uppercase rounded">2022</span>
@@ -372,7 +372,6 @@
             </div>
           </a>
 
-          <!-- OPEN-24-52 -->
           <a href="https://www.it4i.cz/en/for-users/open-access-competition/24th-call-results" target="_blank" rel="noopener" class="content-card group flex flex-col md:flex-row bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm relative overflow-hidden no-underline gap-6 md:gap-8">
             <div class="w-full md:w-48 lg:w-56 shrink-0 h-48 md:h-auto rounded-md overflow-hidden bg-neutral-100 border border-neutral-200 relative">
               <img src="../static/img/project-24-52.jpg" alt="OPEN-24-52" class="w-full h-full object-cover absolute inset-0 group-hover:scale-105 transition-transform duration-500"
@@ -396,12 +395,10 @@
             </div>
           </a>
           
-        </div> <!-- End of space-y-6 vertical list -->
-      </section>
+        </div> </section>
 
     </article>
 
-    <!-- Footer -->
     <footer class="mt-20 pt-8 border-t border-neutral-200 text-sm tracking-wider uppercase text-neutral-400 font-medium opacity-0 animate-fade-in delay-300">
       <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
