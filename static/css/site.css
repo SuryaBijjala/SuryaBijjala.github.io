@@ -1,0 +1,181 @@
+/* =====================================================================
+   Surya T. Bijjala — shared site styles
+   Everything that Tailwind utilities don't cover lives here.
+   Used by every page: <link rel="stylesheet" href="…/static/css/site.css">
+   ===================================================================== */
+
+/* ── Sidebar navigation links ─────────────────────────────────────── */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #171717;
+  transition: width 0.3s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #171717;
+}
+.nav-link.active {
+  font-weight: 500;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ── Staggered entrance animations ────────────────────────────────── */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+
+/* ── Card hover lift ──────────────────────────────────────────────── */
+.content-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.08);
+  border-color: #d4d4d4;
+}
+
+/* ── Thin scrollbars (vertical + horizontal carousels) ────────────── */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #e5e5e5;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #d4d4d4;
+}
+
+/* ── Tag filter buttons (Conferences) ─────────────────────────────── */
+.tag-btn {
+  transition: all 0.2s ease;
+}
+.tag-btn.selected {
+  background-color: #171717;
+  color: #ffffff;
+  border-color: #171717;
+}
+.tag-btn.selected:hover {
+  background-color: #262626;
+  border-color: #262626;
+}
+
+/* ── Page loader (atom spinner) ───────────────────────────────────── */
+body.loading-active .animate-fade-in,
+body.loading-active .animate-slide-up {
+  animation-play-state: paused;
+}
+
+.atom-spinner {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  perspective: 800px;
+}
+.atom-nucleus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: #171717;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px rgba(23, 23, 23, 0.4);
+}
+.atom-orbit {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+.atom-orbit:nth-child(2) { transform: rotateZ(0deg)   rotateX(70deg); }
+.atom-orbit:nth-child(3) { transform: rotateZ(60deg)  rotateX(70deg); }
+.atom-orbit:nth-child(4) { transform: rotateZ(120deg) rotateX(70deg); }
+
+.atom-electron-wrapper {
+  position: absolute;
+  inset: 0;
+  animation: atom-spin linear infinite;
+}
+.atom-orbit:nth-child(2) .atom-electron-wrapper { animation-duration: 1.2s; }
+.atom-orbit:nth-child(3) .atom-electron-wrapper { animation-duration: 1.5s; }
+.atom-orbit:nth-child(4) .atom-electron-wrapper { animation-duration: 1.8s; }
+
+.atom-electron {
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: #171717;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 6px rgba(23, 23, 23, 0.5);
+}
+
+@keyframes atom-spin {
+  from { transform: rotateZ(0deg); }
+  to   { transform: rotateZ(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atom-electron-wrapper { animation: none; }
+  .content-card:hover { transform: none; }
+}
+
+/* ── Law-discovery page: diagram tabs ─────────────────────────────── */
+.fw-tab {
+  position: relative;
+  padding: 0.9rem 0.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #a3a3a3;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+.fw-tab:hover { color: #404040; }
+.fw-tab[aria-selected="true"] { color: #171717; }
+.fw-tab::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  background-color: #171717;
+  transition: width 0.3s ease;
+}
+.fw-tab[aria-selected="true"]::after { width: 100%; }
+
+.fw-diagram {
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fw-diagram svg { height: auto; }
+@media (max-width: 640px) {
+  .fw-diagram svg { min-width: 560px; }
+}

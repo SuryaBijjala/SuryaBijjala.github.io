@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surya T. Bijjala | Materials Scientist</title>
+  <meta name="description" content="Surya T. Bijjala — PhD candidate in materials science at the University of New Mexico working on refractory alloys, DFT-guided machine learning, and advanced manufacturing.">
+
+  <!-- Shared head: fonts, Tailwind, site theme -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="static/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="static/css/site.css">
+</head>
+<body data-page="home" data-root="" class="loading-active bg-neutral-50 text-neutral-800 antialiased min-h-screen flex flex-col lg:flex-row selection:bg-neutral-200 selection:text-neutral-900">
+
+  <div data-include="sidebar"></div>
+
+  <main class="flex-1 flex flex-col px-8 py-12 lg:px-20 lg:py-24 w-full opacity-0 animate-slide-up delay-100">
+    <article class="flex-1">
+
+      <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-neutral-200 pb-8">
+        <div>
+          <h1 class="font-serif text-5xl lg:text-6xl text-neutral-900 tracking-tight mb-3">Biography</h1>
+          <p class="text-xl text-neutral-500 font-sans tracking-wide">PhD Candidate &bull; University of New Mexico</p>
+        </div>
+        <a href="cv/index.html" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-neutral-900 hover:bg-neutral-800 transition-colors rounded shadow-sm">
+          View Curriculum Vitae
+        </a>
+      </header>
+
+      <div class="max-w-none text-neutral-700 font-light leading-relaxed space-y-10 text-lg">
+        <p class="text-2xl lg:text-3xl font-serif text-neutral-800 leading-snug border-l-4 border-neutral-300 pl-6 my-8 italic">
+          Driven to accelerate the discovery of extreme-temperature alloys for next-generation energy sectors by integrating computational modeling, machine learning and advanced manufacturing
+        </p>
+
+        <section>
+          <h2 class="text-sm font-sans tracking-[0.15em] uppercase text-neutral-400 font-semibold mb-4">Current Research</h2>
+          <!-- TODO: "Gas Tungsten Arc Melting-based welding" — the welding process is usually called
+               Gas Tungsten Arc Welding (GTAW). Pick one term and use it on every page. -->
+          <p>
+            Surya T. Bijjala is a graduate student pursuing his PhD in Materials Science under the guidance of Dr. Pankaj Kumar at the University of New Mexico (2021&ndash;present). His research leverages <strong>density functional theory-guided Machine Learning</strong> and <strong>Powder Metallurgy-based manufacturing</strong>, alongside Gas Tungsten Arc Melting-based welding. His core expertise includes high-performance computations on the electronic structure of refractory alloys and attention-based ML models.
+          </p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-10">
+
+          <!-- ========== Computational Projects (links → computational/) ========== -->
+          <section class="bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col h-[26rem]">
+            <h3 class="text-sm font-sans tracking-[0.1em] text-neutral-900 mb-4 uppercase font-semibold shrink-0">Computational Projects</h3>
+            <div class="flex flex-col gap-3 flex-1 overflow-y-auto custom-scrollbar pr-2 pb-2">
+
+              <a href="computational/index.html" class="content-card group block p-4 rounded-md border border-neutral-100 bg-neutral-50 hover:bg-white transition-all no-underline shrink-0">
+                <h4 class="text-base font-medium text-neutral-800 group-hover:text-black mb-1">Mapping elastic property heterogeneity</h4>
+                <p class="text-sm text-neutral-500 m-0 leading-relaxed font-normal">Effect of chemical disorder on lattice resolved elastic property variation</p>
+              </a>
+
+              <a href="computational/law-discovery.html" class="content-card group block p-4 rounded-md border border-neutral-100 bg-neutral-50 hover:bg-white transition-all no-underline shrink-0">
+                <h4 class="text-base font-medium text-neutral-800 group-hover:text-black mb-1">Multi-Agent Physical-Law Discovery</h4>
+                <p class="text-sm text-neutral-500 m-0 leading-relaxed font-normal">LLM agents and symbolic regression for interpretable materials laws</p>
+              </a>
+
+              <a href="computational/index.html" class="content-card group block p-4 rounded-md border border-neutral-100 bg-neutral-50 hover:bg-white transition-all no-underline shrink-0">
+                <h4 class="text-base font-medium text-neutral-800 group-hover:text-black mb-1">Attention-Based ML</h4>
+                <p class="text-sm text-neutral-500 m-0 leading-relaxed font-normal">Machine learning models for structural alloys</p>
+              </a>
+
+              <!-- TODO(template): "JorGpi Framework" is from the site this was based on (JorG paper,
+                   Comput. Phys. Commun. 2020). Replace or delete this card. -->
+              <a href="computational/index.html" class="content-card group block p-4 rounded-md border border-neutral-100 bg-neutral-50 hover:bg-white transition-all no-underline shrink-0">
+                <h4 class="text-base font-medium text-neutral-800 group-hover:text-black mb-1">JorGpi Framework</h4>
+                <p class="text-sm text-neutral-500 m-0 leading-relaxed font-normal">DFT-to-Heisenberg mapping framework</p>
+              </a>
+
+            </div>
+          </section>
+
+          <!-- ========== Experimental Projects (links → experimental/) ========== -->
+          <section class="bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col h-[26rem]">
+            <h3 class="text-sm font-sans tracking-[0.1em] text-neutral-900 mb-4 uppercase font-semibold shrink-0">Experimental Projects</h3>
+            <div class="flex flex-col gap-3 flex-1 overflow-y-auto custom-scrollbar pr-2 pb-2">
+
+              <a href="experimental/index.html" class="content-card group block p-4 rounded-md border border-neutral-100 bg-neutral-50 hover:bg-white transition-all no-underline shrink-0">
+                <h4 class="text-base font-medium text-neutral-800 group-hover:text-black mb-1">W-Cr Based Alloys</h4>
+                <p class="text-sm text-neutral-500 m-0 leading-relaxed font-normal">Tailoring thermal stability for fusion applications</p>
+              </a>
+
+              <a href="experimental/index.html" class="content-card group block p-4 rounded-md border border-neutral-100 bg-neutral-50 hover:bg-white transition-all no-underline shrink-0">
+                <h4 class="text-base font-medium text-neutral-800 group-hover:text-black mb-1">Advanced Manufacturing</h4>
+                <p class="text-sm text-neutral-500 m-0 leading-relaxed font-normal">Powder metallurgy &amp; Gas Tungsten Arc Melting</p>
+              </a>
+
+              <a href="experimental/index.html" class="content-card group block p-4 rounded-md border border-neutral-100 bg-neutral-50 hover:bg-white transition-all no-underline shrink-0">
+                <h4 class="text-base font-medium text-neutral-800 group-hover:text-black mb-1">Microstructural Analysis</h4>
+                <p class="text-sm text-neutral-500 m-0 leading-relaxed font-normal">Characterization of refractory alloys</p>
+              </a>
+
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </article>
+
+    <div data-include="footer"></div>
+  </main>
+
+  <script src="static/js/site.js"></script>
+</body>
+</html>

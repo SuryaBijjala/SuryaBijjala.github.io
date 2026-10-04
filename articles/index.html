@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles | Surya T. Bijjala</title>
+  <meta name="description" content="Peer-reviewed publications by Surya T. Bijjala.">
+
+  <!-- Shared head: fonts, Tailwind, site theme -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../static/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../static/css/site.css">
+</head>
+<body data-page="articles" data-root="../" class="loading-active bg-neutral-50 text-neutral-800 antialiased min-h-screen flex flex-col lg:flex-row selection:bg-neutral-200 selection:text-neutral-900">
+
+  <div data-include="sidebar"></div>
+
+  <main class="flex-1 flex flex-col px-8 py-12 lg:px-20 lg:py-24 w-full opacity-0 animate-slide-up delay-100">
+    <article class="flex-1">
+
+      <header class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-neutral-200 pb-8">
+        <div>
+          <h1 class="font-serif text-5xl lg:text-6xl text-neutral-900 tracking-tight mb-3">Articles</h1>
+          <p class="text-xl text-neutral-500 font-sans tracking-wide">Selected Peer-Reviewed Publications</p>
+        </div>
+        <a href="https://scholar.google.com/citations?user=A4swq4MAAAAJ&amp;hl=en" target="_blank" rel="noopener" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-[#4285F4] hover:bg-[#3367D6] transition-colors rounded shadow-sm gap-2">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+          Google Scholar Profile
+        </a>
+      </header>
+
+      <!--
+        HOW TO ADD A PUBLICATION
+        Copy one <div class="content-card …"> block below, newest first.
+        To add a graphical abstract, replace the "Insert Image" <span> with:
+          <img src="../static/img/articles/your-image.png" alt="Graphical abstract" class="w-full h-full object-cover">
+      -->
+      <div class="space-y-6">
+
+        <div class="content-card bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 relative group">
+          <div class="flex-1 flex flex-col">
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3 gap-2">
+              <span class="text-xs font-sans tracking-widest uppercase text-neutral-400 font-semibold">2025</span>
+              <span class="text-sm font-sans text-neutral-500">Int J Adv Manuf Technol 136, 937–950</span>
+            </div>
+            <h2 class="text-2xl font-serif text-neutral-900 leading-snug mb-5 pr-4 transition-colors group-hover:text-black">
+              <a href="https://link.springer.com/article/10.1007/s00170-024-14892-y" target="_blank" rel="noopener" class="before:absolute before:inset-0 z-10">Evaluation of the Mechanical property heterogeneity in laser-directed energy deposited Ti-6Al-4V alloy</a>
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-auto pt-5 border-t border-neutral-100 relative z-20">
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Int J Adv Manuf Technol</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Additive Manufacturing</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Property Heterogeneity</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Ti-6Al-4V</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">LDED</span>
+            </div>
+          </div>
+          <div class="w-full md:w-48 lg:w-56 shrink-0 min-h-[10rem] md:min-h-0 rounded bg-neutral-50 border border-neutral-200 flex items-center justify-center overflow-hidden transition-colors group-hover:bg-neutral-100 group-hover:border-neutral-300">
+            <span class="text-neutral-400 text-xs font-sans tracking-widest uppercase font-medium">Insert Image</span>
+          </div>
+        </div>
+
+        <!-- TODO(verify): confirm you are an author on this paper — it also appears on the template site. -->
+        <div class="content-card bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 relative group">
+          <div class="flex-1 flex flex-col">
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3 gap-2">
+              <span class="text-xs font-sans tracking-widest uppercase text-neutral-400 font-semibold">2022</span>
+              <span class="text-sm font-sans text-neutral-500">Materials Letters 325, 133148</span>
+            </div>
+            <h2 class="text-2xl font-serif text-neutral-900 leading-snug mb-5 pr-4 transition-colors group-hover:text-black">
+              <a href="https://doi.org/10.1016/j.matlet.2022.133148" target="_blank" rel="noopener" class="before:absolute before:inset-0 z-10">Determining the elastic properties of single grains in the ultrafine-grained W-Cr composite</a>
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-auto pt-5 border-t border-neutral-100 relative z-20">
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Mater. Lett.</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">refractory metals</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">W-Cr alloys</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">DFT</span>
+            </div>
+          </div>
+          <div class="w-full md:w-48 lg:w-56 shrink-0 min-h-[10rem] md:min-h-0 rounded bg-neutral-50 border border-neutral-200 flex items-center justify-center overflow-hidden transition-colors group-hover:bg-neutral-100 group-hover:border-neutral-300">
+            <span class="text-neutral-400 text-xs font-sans tracking-widest uppercase font-medium">Insert Image</span>
+          </div>
+        </div>
+
+        <!-- TODO(verify): confirm you are an author on this paper — it also appears on the template site. -->
+        <div class="content-card bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 relative group">
+          <div class="flex-1 flex flex-col">
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3 gap-2">
+              <span class="text-xs font-sans tracking-widest uppercase text-neutral-400 font-semibold">2021</span>
+              <span class="text-sm font-sans text-neutral-500">Corrosion Science 185, 109671</span>
+            </div>
+            <h2 class="text-2xl font-serif text-neutral-900 leading-snug mb-5 pr-4 transition-colors group-hover:text-black">
+              <a href="https://doi.org/10.1016/j.corsci.2021.109671" target="_blank" rel="noopener" class="before:absolute before:inset-0 z-10">Adsorption and corrosion inhibition efficiency of imidazole-based compounds on the iron surface: A first-principles study</a>
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-auto pt-5 border-t border-neutral-100 relative z-20">
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Corros. Sci.</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">corrosion inhibitors</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">DFT</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">quantum chemistry</span>
+            </div>
+          </div>
+          <div class="w-full md:w-48 lg:w-56 shrink-0 min-h-[10rem] md:min-h-0 rounded bg-neutral-50 border border-neutral-200 flex items-center justify-center overflow-hidden transition-colors group-hover:bg-neutral-100 group-hover:border-neutral-300">
+            <span class="text-neutral-400 text-xs font-sans tracking-widest uppercase font-medium">Insert Image</span>
+          </div>
+        </div>
+
+        <!-- TODO(template): publication from the template site — replace or delete. -->
+        <div class="content-card bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 relative group">
+          <div class="flex-1 flex flex-col">
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3 gap-2">
+              <span class="text-xs font-sans tracking-widest uppercase text-neutral-400 font-semibold">2020</span>
+              <span class="text-sm font-sans text-neutral-500">Comput. Phys. Commun. 249, 106935</span>
+            </div>
+            <h2 class="text-2xl font-serif text-neutral-900 leading-snug mb-5 pr-4 transition-colors group-hover:text-black">
+              <a href="https://doi.org/10.1016/j.cpc.2019.106935" target="_blank" rel="noopener" class="before:absolute before:inset-0 z-10">JorG: A framework for mapping DFT results onto the Heisenberg model</a>
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-auto pt-5 border-t border-neutral-100 relative z-20">
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Comput. Phys. Commun.</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Heisenberg model</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">DFT</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">HPC</span>
+            </div>
+          </div>
+          <div class="w-full md:w-48 lg:w-56 shrink-0 min-h-[10rem] md:min-h-0 rounded bg-neutral-50 border border-neutral-200 flex items-center justify-center overflow-hidden transition-colors group-hover:bg-neutral-100 group-hover:border-neutral-300">
+            <span class="text-neutral-400 text-xs font-sans tracking-widest uppercase font-medium">Insert Image</span>
+          </div>
+        </div>
+
+        <!-- TODO(template): publication from the template site — replace or delete. -->
+        <div class="content-card bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 relative group">
+          <div class="flex-1 flex flex-col">
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3 gap-2">
+              <span class="text-xs font-sans tracking-widest uppercase text-neutral-400 font-semibold">2019</span>
+              <span class="text-sm font-sans text-neutral-500">New J. Phys. 21, 063003</span>
+            </div>
+            <h2 class="text-2xl font-serif text-neutral-900 leading-snug mb-5 pr-4 transition-colors group-hover:text-black">
+              <a href="https://doi.org/10.1088/1367-2630/ab2453" target="_blank" rel="noopener" class="before:absolute before:inset-0 z-10">Metallicity and superconductivity of the hydrogen-rich compounds: EDABI revisited</a>
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-auto pt-5 border-t border-neutral-100 relative z-20">
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">New J. Phys.</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Superconductivity</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Hydrogen</span>
+            </div>
+          </div>
+          <div class="w-full md:w-48 lg:w-56 shrink-0 min-h-[10rem] md:min-h-0 rounded bg-neutral-50 border border-neutral-200 flex items-center justify-center overflow-hidden transition-colors group-hover:bg-neutral-100 group-hover:border-neutral-300">
+            <span class="text-neutral-400 text-xs font-sans tracking-widest uppercase font-medium">Insert Image</span>
+          </div>
+        </div>
+
+        <!-- TODO(template): publication from the template site — replace or delete. -->
+        <div class="content-card bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 relative group">
+          <div class="flex-1 flex flex-col">
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3 gap-2">
+              <span class="text-xs font-sans tracking-widest uppercase text-neutral-400 font-semibold">2017</span>
+              <span class="text-sm font-sans text-neutral-500">Scientific Reports 7, 12358</span>
+            </div>
+            <h2 class="text-2xl font-serif text-neutral-900 leading-snug mb-5 pr-4 transition-colors group-hover:text-black">
+              <a href="https://doi.org/10.1038/s41598-017-11687-6" target="_blank" rel="noopener" class="before:absolute before:inset-0 z-10">Spin-dependent masses in high magnetic field: Minimal model for CeCoIn5</a>
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-auto pt-5 border-t border-neutral-100 relative z-20">
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Scientific Reports</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">CeCoIn5</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">f-electrons</span>
+            </div>
+          </div>
+          <div class="w-full md:w-48 lg:w-56 shrink-0 min-h-[10rem] md:min-h-0 rounded bg-neutral-50 border border-neutral-200 flex items-center justify-center overflow-hidden transition-colors group-hover:bg-neutral-100 group-hover:border-neutral-300">
+            <span class="text-neutral-400 text-xs font-sans tracking-widest uppercase font-medium">Insert Image</span>
+          </div>
+        </div>
+
+        <!-- TODO(template): publication from the template site — replace or delete. -->
+        <div class="content-card bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 relative group">
+          <div class="flex-1 flex flex-col">
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3 gap-2">
+              <span class="text-xs font-sans tracking-widest uppercase text-neutral-400 font-semibold">2017</span>
+              <span class="text-sm font-sans text-neutral-500">Phys. Rev. B 95, 085131</span>
+            </div>
+            <h2 class="text-2xl font-serif text-neutral-900 leading-snug mb-5 pr-4 transition-colors group-hover:text-black">
+              <a href="https://doi.org/10.1103/PhysRevB.95.085131" target="_blank" rel="noopener" class="before:absolute before:inset-0 z-10">Atomization of correlated molecular-hydrogen chain: A fully microscopic variational Monte Carlo solution</a>
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-auto pt-5 border-t border-neutral-100 relative z-20">
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Phys. Rev. B</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Monte Carlo</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Hydrogen</span>
+            </div>
+          </div>
+          <div class="w-full md:w-48 lg:w-56 shrink-0 min-h-[10rem] md:min-h-0 rounded bg-neutral-50 border border-neutral-200 flex items-center justify-center overflow-hidden transition-colors group-hover:bg-neutral-100 group-hover:border-neutral-300">
+            <span class="text-neutral-400 text-xs font-sans tracking-widest uppercase font-medium">Insert Image</span>
+          </div>
+        </div>
+
+        <!-- TODO(template): publication from the template site — replace or delete. -->
+        <div class="content-card bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 relative group">
+          <div class="flex-1 flex flex-col">
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3 gap-2">
+              <span class="text-xs font-sans tracking-widest uppercase text-neutral-400 font-semibold">2014</span>
+              <span class="text-sm font-sans text-neutral-500">Phys. Rev. B 89, 245124</span>
+            </div>
+            <h2 class="text-2xl font-serif text-neutral-900 leading-snug mb-5 pr-4 transition-colors group-hover:text-black">
+              <a href="https://doi.org/10.1103/PhysRevB.89.245124" target="_blank" rel="noopener" class="before:absolute before:inset-0 z-10">Metallization of atomic solid hydrogen within the extended Hubbard model with renormalized Wannier wave functions</a>
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-auto pt-5 border-t border-neutral-100 relative z-20">
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Phys. Rev. B</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Metal-Insulator transition</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">ab initio</span>
+            </div>
+          </div>
+          <div class="w-full md:w-48 lg:w-56 shrink-0 min-h-[10rem] md:min-h-0 rounded bg-neutral-50 border border-neutral-200 flex items-center justify-center overflow-hidden transition-colors group-hover:bg-neutral-100 group-hover:border-neutral-300">
+            <span class="text-neutral-400 text-xs font-sans tracking-widest uppercase font-medium">Insert Image</span>
+          </div>
+        </div>
+
+        <!-- TODO(template): publication from the template site — replace or delete. -->
+        <div class="content-card bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col md:flex-row gap-6 lg:gap-8 relative group">
+          <div class="flex-1 flex flex-col">
+            <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-3 gap-2">
+              <span class="text-xs font-sans tracking-widest uppercase text-neutral-400 font-semibold">2011</span>
+              <span class="text-sm font-sans text-neutral-500">Phys. Rev. B 84, 115138</span>
+            </div>
+            <h2 class="text-2xl font-serif text-neutral-900 leading-snug mb-5 pr-4 transition-colors group-hover:text-black">
+              <a href="https://doi.org/10.1103/PhysRevB.84.115138" target="_blank" rel="noopener" class="before:absolute before:inset-0 z-10">Discontinuous Mott-Hubbard transition in a one-dimensional model of hydrogen: Exact solution</a>
+            </h2>
+            <div class="flex flex-wrap gap-2 mt-auto pt-5 border-t border-neutral-100 relative z-20">
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Phys. Rev. B</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Mott transition</span>
+              <span class="px-3 py-1 bg-neutral-50 border border-neutral-200 text-neutral-500 text-xs rounded-md font-medium">Exact diagonalization</span>
+            </div>
+          </div>
+          <div class="w-full md:w-48 lg:w-56 shrink-0 min-h-[10rem] md:min-h-0 rounded bg-neutral-50 border border-neutral-200 flex items-center justify-center overflow-hidden transition-colors group-hover:bg-neutral-100 group-hover:border-neutral-300">
+            <span class="text-neutral-400 text-xs font-sans tracking-widest uppercase font-medium">Insert Image</span>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <div data-include="footer"></div>
+  </main>
+
+  <script src="../static/js/site.js"></script>
+</body>
+</html>

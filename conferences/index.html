@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conferences | Surya T. Bijjala</title>
+  <meta name="description" content="Conference talks, presentations, and posters by Surya T. Bijjala.">
+
+  <!-- Shared head: fonts, Tailwind, site theme -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../static/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../static/css/site.css">
+</head>
+<body data-page="conferences" data-root="../" class="loading-active bg-neutral-50 text-neutral-800 antialiased min-h-screen flex flex-col lg:flex-row selection:bg-neutral-200 selection:text-neutral-900">
+
+  <div data-include="sidebar"></div>
+
+  <main class="flex-1 flex flex-col px-8 py-12 lg:px-20 lg:py-24 w-full opacity-0 animate-slide-up delay-100">
+    <article class="flex-1 max-w-6xl">
+
+      <header class="mb-10 border-b border-neutral-200 pb-8">
+        <h1 class="font-serif text-5xl lg:text-6xl text-neutral-900 tracking-tight mb-3">Conferences</h1>
+        <p class="text-xl text-neutral-500 font-sans tracking-wide">Public activity, presentations, and posters</p>
+      </header>
+
+      <!-- Tag filter — buttons are generated automatically from the tags on the cards below
+           (static/js/tag-filter.js). Nothing to edit here. -->
+      <div class="flex flex-wrap gap-2 mb-12" id="tagCloud" aria-label="Filter by tag"></div>
+
+      <!--
+        HOW TO ADD A TALK
+        1. Put the slides/poster PDF in static/docs/conferences/<name>.pdf
+           and a thumbnail in static/img/conferences/<name>.jpg
+        2. Copy one <div class="js-filter-card …"> block below (newest first) and edit it.
+           Each <span class="js-tag …"> becomes a filter button automatically.
+
+        TODO(template): all three talks below are from the template site. Replace with your own.
+      -->
+      <div class="space-y-6 lg:space-y-8">
+
+        <div class="js-filter-card content-card group bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col sm:flex-row gap-6 lg:gap-8">
+          <div class="w-full sm:w-40 lg:w-56 shrink-0 h-48 sm:h-auto relative rounded-md overflow-hidden bg-neutral-100 border border-neutral-100">
+            <img src="../static/img/conferences/krakow2024.jpg" alt="Presentation thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-fallback="Presentation">
+          </div>
+          <div class="flex-1 flex flex-col justify-between gap-4">
+            <div>
+              <h2 class="font-serif text-xl lg:text-2xl text-neutral-900 mb-4 leading-snug">
+                <a href="../static/docs/conferences/krakow2024.pdf" target="_blank" rel="noopener" class="hover:text-neutral-500 transition-colors">Anharmonicity, electron-lattice coupling, and superconductivity in hydrogen-rich systems</a>
+              </h2>
+              <div class="flex flex-wrap gap-2">
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">Superconductivity</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">Phonons</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">Anharmonicity</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">Hydrogen</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">Metallization</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">HPC</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">ab initio</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">Extreme pressure</span>
+              </div>
+            </div>
+            <div class="mt-2 flex flex-col sm:flex-row sm:items-center justify-between border-t border-neutral-100 pt-4 text-sm font-sans gap-3">
+              <span class="text-neutral-500">XXI National Conference on Superconductivity, Sep 2024</span>
+              <a href="../static/docs/conferences/krakow2024.pdf" target="_blank" rel="noopener" class="font-medium text-neutral-900 hover:text-neutral-600 transition-colors inline-flex items-center gap-1.5 shrink-0">
+                View Document <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="js-filter-card content-card group bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col sm:flex-row gap-6 lg:gap-8">
+          <div class="w-full sm:w-40 lg:w-56 shrink-0 h-48 sm:h-auto relative rounded-md overflow-hidden bg-neutral-100 border border-neutral-100">
+            <img src="../static/img/conferences/lausanne2022.jpg" alt="Presentation thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-fallback="Presentation">
+          </div>
+          <div class="flex-1 flex flex-col justify-between gap-4">
+            <div>
+              <h2 class="font-serif text-xl lg:text-2xl text-neutral-900 mb-4 leading-snug">
+                <a href="../static/docs/conferences/lausanne2022.pdf" target="_blank" rel="noopener" class="hover:text-neutral-500 transition-colors">Materials for application in Fusion Reactors: Determining the elastic properties of single grains in the ultrafine-grained W-Cr composite</a>
+              </h2>
+              <div class="flex flex-wrap gap-2">
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">refractory metals</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">tungsten-chromium alloys</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">miscibility gap</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">ab initio</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">special quasirandom structures</span>
+              </div>
+            </div>
+            <div class="mt-2 flex flex-col sm:flex-row sm:items-center justify-between border-t border-neutral-100 pt-4 text-sm font-sans gap-3">
+              <span class="text-neutral-500">Psi-k conference, EPFL, Lausanne, Aug 2022</span>
+              <a href="../static/docs/conferences/lausanne2022.pdf" target="_blank" rel="noopener" class="font-medium text-neutral-900 hover:text-neutral-600 transition-colors inline-flex items-center gap-1.5 shrink-0">
+                View Document <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="js-filter-card content-card group bg-white p-6 lg:p-8 rounded-lg border border-neutral-200 shadow-sm flex flex-col sm:flex-row gap-6 lg:gap-8">
+          <div class="w-full sm:w-40 lg:w-56 shrink-0 h-48 sm:h-auto relative rounded-md overflow-hidden bg-neutral-100 border border-neutral-100">
+            <img src="../static/img/conferences/krakow2021.jpg" alt="Presentation thumbnail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-fallback="Presentation">
+          </div>
+          <div class="flex-1 flex flex-col justify-between gap-4">
+            <div>
+              <h2 class="font-serif text-xl lg:text-2xl text-neutral-900 mb-4 leading-snug">
+                <a href="../static/docs/conferences/krakow2021.pdf" target="_blank" rel="noopener" class="hover:text-neutral-500 transition-colors">Modeling of alloys: Determining the elastic properties of single grains in the ultrafine-grained W-Cr composite</a>
+              </h2>
+              <div class="flex flex-wrap gap-2">
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">refractory metals</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">tungsten-chromium alloys</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">miscibility gap</span>
+                <span class="js-tag px-2.5 py-1 bg-neutral-100 text-neutral-600 text-xs rounded font-medium">ab initio</span>
+              </div>
+            </div>
+            <div class="mt-2 flex flex-col sm:flex-row sm:items-center justify-between border-t border-neutral-100 pt-4 text-sm font-sans gap-3">
+              <span class="text-neutral-500">Seminarium L-10, Politechnika Krakowska, Nov 2021</span>
+              <a href="../static/docs/conferences/krakow2021.pdf" target="_blank" rel="noopener" class="font-medium text-neutral-900 hover:text-neutral-600 transition-colors inline-flex items-center gap-1.5 shrink-0">
+                View Document <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <div data-include="footer"></div>
+  </main>
+
+  <script src="../static/js/site.js"></script>
+  <script src="../static/js/tag-filter.js"></script>
+</body>
+</html>
